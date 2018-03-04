@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>DocumentCloud Web Uploader</title>
+  </head>
+  <body>
+
+    <div id="controls">
+      <label for="url">Document web address</label>
+      <input id="url" name="url" type="text"></input>
+      <label for="title">Document title</label>
+      <input id="title" name="title" type="text"></input>
+      
+      <label for="project">Project</label>    
+      <select id="project" name="project"></select>    
+      <input id="upload" name="upload" type="button"
+	     value="Upload"></input>
+      <label for="description">Description</label>
+      <textarea id="description" rows=5></textarea>
+      <div class="status" id="upload-status"></div>
+    </div>
+
+    <div id="credentials">
+      <label for="username">Username</label>
+      <input id="username" name="username" type="text"></input>
+      
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password"></input>
+      <input id="connect" name="connect" type="button" value="Connect"></input>
+      <div class="status" id="connection-status">Not connected</div>
+    </div>
+    
+    <script src="js/index.js"></script>
+  </body>
+</html>

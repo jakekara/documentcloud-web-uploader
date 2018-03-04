@@ -1,0 +1,23 @@
+{
+  "name": "DocumentCloud-Web-Uploader",
+  "version": "0.0.1",
+  "description": "A tool for uploading directly to DocumentCloud from a URL",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/jakekara/documentcloud-web-uploader",
+  "keywords": [
+      "DocumentCloud",
+      "Journalism"
+  ],
+  "author": "Jake Kara",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "electron": "~1.8.2"
+  },
+  "dependencies": {
+    "documentcloud": "^0.1.0",
+    "npm": "^5.7.1"
+  }
+}
