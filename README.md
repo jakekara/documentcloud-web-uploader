@@ -15,7 +15,7 @@ If anyone wants to take this and run with it, please do!
 
 ### Usage
 
-Run this with npm start.
+Run this with npm install, npm start.
 
 Put in your username and password, then hit connect.
 
