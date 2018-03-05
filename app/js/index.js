@@ -52,21 +52,17 @@ function populateProjects(projects){
     addItem(null, "None");
 
     projects.forEach(function(p){
-	console.log(p);
 	addItem(p["id"], p["title"]);
     });
 }
 
 function connectToDocumentCloud(){
-    console.log("Connecting to DocumentCloud");
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
-    console.log("Connecting to DocumentCloud with username " + username + " and password of length: " + password.length);
     client = new documentcloud(username, password);
 
     client.projects.list(function(x, y, z){
-	console.log("API Response", x, y, z);
 	setConnectionStatus(y["status_code"]);
 
 	if (y["status_code"] == 200){
@@ -126,12 +122,10 @@ function uploadDocument(){
     var proj_id = getSelectedProjectId();
     if ( Number(proj_id) > 0 ){ opts["project"] = proj_id; }
 
-    console.log("Uploading URL", url, "with options", opts);
 
     if (url == null){ return; }
 
     client.documents.upload(url, title, opts, function(x, y, z){
-	console.log("Callback", x, y, z);
 	setUploadStatus(y);
     });
     
@@ -139,7 +133,6 @@ function uploadDocument(){
 
 function validateUrl(){
     var url = document.getElementById("url");
-    console.log(url);
     return url.value;
 }
 
